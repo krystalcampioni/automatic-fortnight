@@ -1,0 +1,39 @@
+.tabs {
+  float: none;
+  list-style: none;
+  position: relative;
+  text-align: left;
+
+  li {
+    float: left;
+    display: block;
+  }
+
+  input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+  }
+
+  .tab__content{
+    z-index: 2;
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 25px;
+    left: 0;
+  }
+
+  [id^="tab"]:checked + label {
+    border-bottom: 1px solid #fff;
+    cursor: default;
+    font-weight: 700;
+    box-shadow: 2px 0 2px rgba(255,255,255,.5);
+    z-index: 10;
+    position: relative;
+  }
+
+  [id^="tab"]:checked ~ [id^="tab-content"] {
+    display: block;
+  }
+}

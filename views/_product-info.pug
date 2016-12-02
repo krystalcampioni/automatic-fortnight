@@ -1,6 +1,6 @@
 .product__info
-  .demo-carousel.ch-carousel
+  .related-products__carousel.ch-carousel
     ul
-      each i in new Array(12)
-        li
-          img(src='http://lorempixel.com/500/201/')
+      each i in new Array(6)
+        li.related-products__item.ch-carousel-item(aria-hidden='false', aria-setsize='18', aria-posinset=(i), aria-label='page1')
+          img(src='http://lorempixel.com/150/150/')

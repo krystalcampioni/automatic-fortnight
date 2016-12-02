@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     minifyhtml = require('gulp-minify-html');
     pug = require('gulp-pug');
     nodeSassGlobbing = require('node-sass-globbing');
+    autoprefixer = require('gulp-autoprefixer');
 
 // Paths to various files
 var paths = {
@@ -30,6 +31,10 @@ gulp.task('styles', function() {
       .pipe(cleanCSS({debug: true}, function(details) {
           console.log(details.name + ': ' + details.stats.originalSize);
           console.log(details.name + ': ' + details.stats.minifiedSize);
+      }))
+      .pipe(autoprefixer({
+          browsers: ['last 2 versions'],
+          cascade: false
       }))
       .pipe(gulp.dest('./docs/css/'));
 });

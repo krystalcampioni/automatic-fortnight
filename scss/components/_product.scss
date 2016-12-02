@@ -1,0 +1,19 @@
+.product {
+  &__container {
+    @include outer-container;
+  }
+
+  &__box {
+    @include span-columns(12 of 12);
+  }
+
+  &__image {
+    @include span-columns(6 of 12);
+    @include omega();
+  }
+
+  &__info {
+    @include span-columns(6 of 12);
+    @include omega();
+  }
+}

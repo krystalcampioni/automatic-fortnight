@@ -13,9 +13,9 @@ var gulp = require('gulp'),
 
 // Paths to various files
 var paths = {
-    scripts: ['js/*'],
+    scripts: ['js/tiny.min.js', 'js/chico.min.js', 'js/*'],
     styles: ['scss/main.scss','scss/**/*.scss', 'scss/*.scss'],
-    images: ['images/**/*'],
+    images: ['assets/**/*'],
     content: ['views/*.pug']
 }
 
@@ -63,7 +63,7 @@ gulp.task('images', function() {
                 .pipe(imagemin({
                     optimizationLevel: 5
                 }))
-                .pipe(gulp.dest('./docs/images'))
+                .pipe(gulp.dest('./docs/assets'))
 })
 
 // Watches for changes to our files and executes required scripts

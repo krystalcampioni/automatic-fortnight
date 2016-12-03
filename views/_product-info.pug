@@ -2,17 +2,17 @@
   form
     fieldset
       article(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
-        span.product__price.ch-price(itemprop="price") R$ 3.741
+        span.product__price.ch-price(itemprop="price" itemprop="priceCurrency") R$ 3.741
           sup 79
 
-      .product__quantity(itemprop="eligibleQuantity")
+      .product__quantity
         label(for="quantity") quantity
         select
           - var i = 1;
           while i < 4
             option= i++
 
-      .product__payments(itemprop="priceSpecification")
+      .product__payments
         label(for="payments") payments
         select
           - var n = 1;

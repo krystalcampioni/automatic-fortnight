@@ -1,6 +1,30 @@
 .product__info
+  form
+    fieldset
+      article.product__price.ch-price
+        | R$ 3.741
+        sup 79
+
+      .product__quantity
+        label(for="quantity") quantity
+        select
+          - var i = 1;
+          while i < 4
+            option= i++
+
+      .product__payments
+        label(for="payments") payments
+        select
+          - var n = 1;
+          while n <= 12
+            option= n++
+
+      input.ch-btn.ch-btn-large(type='button', value='Buy')
+      .product__notice MercadoLivre isn't the owner of this product
+
+  h2 More products like this
   .related-products__carousel.ch-carousel
     ul
       each i in new Array(6)
         li.related-products__item.ch-carousel-item(aria-hidden='false', aria-setsize='18', aria-posinset=(i), aria-label='page1')
-          img(src='http://lorempixel.com/150/150/')
+          img(src='http://placehold.it/150x150')

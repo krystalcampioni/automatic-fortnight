@@ -9,13 +9,13 @@ $max-tab-count: 2;
       position: relative;
       text-shadow: 0 0 0;
       top: 0;
-      transform: translateY(0px);
       transition: 0.5s opacity ease-in, 0.8s transform ease;
       z-index: 100;
     }
   }
 
-  &:checked + label {
+  &:checked + label,
+  &:checked + label:hover  {
     @include linear-gradient(#f0f0f0, #fff);
     border-bottom: 1px solid #fff;
     cursor: default;
@@ -38,7 +38,6 @@ $max-tab-count: 2;
     margin-top: -1px;
     opacity: 0;
     position: absolute;
-    transform: translateY(-3px);
     width: 100%;
     z-index: -1;
   }

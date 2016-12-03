@@ -4,9 +4,8 @@
   }
 
   &__item {
+    @include size(50px);
     padding: 5px;
-    width: 150px;
-    height: 150px;
 
     img { width: 100%; }
 

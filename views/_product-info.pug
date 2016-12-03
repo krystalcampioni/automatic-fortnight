@@ -18,13 +18,15 @@
           - var n = 1;
           while n <= 12
             option= n++
-
-      input.ch-btn.ch-btn-large(type='button', value='Buy')
-      .product__notice MercadoLivre isn't the owner of this product
+      .product__call-to-action
+        input.ch-btn.ch-btn-large(type='button', value='Buy')
+        .product__notice MercadoLivre isn't the owner of this product
 
   h2 More products like this
   .related-products__carousel.ch-carousel
     ul
-      each i in new Array(6)
-        li.related-products__item.ch-carousel-item(aria-hidden='false', aria-setsize='18', aria-posinset=(i), aria-label='page1')
-          img(src='http://placehold.it/150x150')
+      - var z = 1;
+      while z <= 10
+        li.related-products__item.ch-carousel-item(aria-hidden='false', aria-setsize='18', aria-posinset=(z), aria-label='page')
+          img(src='http://placehold.it/100x100')
+          - z++

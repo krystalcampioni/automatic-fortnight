@@ -10,13 +10,13 @@
         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
     .tab__content.ch-box-lite.ch-tabs-panel.tab__content(role='tabpanel', aria-labelledby='Questions', aria-hidden='true')
-      ul.question__list
-        li.question__item
+      ul.question__list(itemscope itemtype="http://schema.org/Comment")
+        li.question__item( itemprop="comment")
           article
             span.question__author.question__author--buyer Buyer
             .question__comment.question__comment--buyer Do you have this one in white?
 
-        li.question__item
+        li.question__item( itemprop="comment")
           article
             span.question__author.question__author--seller Seller
             .question__comment.question__comment--seller No I don't, I only have black

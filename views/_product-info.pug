@@ -1,18 +1,18 @@
 .product__info
   form
     fieldset
-      article.product__price.ch-price
-        | R$ 3.741
-        sup 79
+      article(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
+        span.product__price.ch-price(itemprop="price") R$ 3.741
+          sup 79
 
-      .product__quantity
+      .product__quantity(itemprop="eligibleQuantity")
         label(for="quantity") quantity
         select
           - var i = 1;
           while i < 4
             option= i++
 
-      .product__payments
+      .product__payments(itemprop="priceSpecification")
         label(for="payments") payments
         select
           - var n = 1;
@@ -23,10 +23,10 @@
         .product__notice MercadoLivre isn't the owner of this product
 
   h2 More products like this
-  .related-products__carousel.ch-carousel
+  .related-products__carousel.ch-carousel(itemprop="isRelatedTo")
     ul
       - var z = 1;
       while z <= 10
-        li.related-products__item.ch-carousel-item(aria-hidden='false', aria-setsize='18', aria-posinset=(z), aria-label='page')
+        li.related-products__item.ch-carousel-item(aria-hidden='false', aria-setsize='18', aria-posinset=(z), aria-label='page', itemscope, itemtype="http://schema.org/Product")
           img(src='http://placehold.it/100x100')
           - z++

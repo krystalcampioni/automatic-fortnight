@@ -23,11 +23,12 @@ main.product__info
         input.ch-btn.ch-btn-large(type='button', value='Buy')
         .product__notice MercadoLivre isn't the owner of this product
 
+.related-products
   h2 More products like this
   .related-products__carousel.ch-carousel(itemprop="isRelatedTo")
     ul
       - var z = 1;
       while z <= 10
         li.related-products__item.ch-carousel-item(aria-hidden='false', aria-setsize='18', aria-posinset=(z), aria-label='page')
-          img(src='http://placehold.it/100x100')
+          img(src='http://placehold.it/80x80')
           - z++

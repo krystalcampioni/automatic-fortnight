@@ -1,11 +1,19 @@
 .related-products {
+  @include span-columns(6 of 12);
+  @include omega();
+  @include pad();
+
+  @include media($tablet) {
+    @include span-columns(12 of 12);
+  }
+
   &__carousel {
     white-space: nowrap;
   }
 
   &__item {
-    @include size(50px);
-    padding: 5px;
+    @include size(80px);
+    @include pad(5px);
 
     img { width: 100%; }
 

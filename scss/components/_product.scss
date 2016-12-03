@@ -23,7 +23,7 @@
     @include omega();
     @include pad();
 
-    @include media($tablet) {
+    @include media($mobile) {
       @include span-columns(12 of 12);
     }
   }

@@ -12,7 +12,7 @@ html
   body
     .product__container
       .ch-box-lite.product__box
-        h1 Ipad Mini Apple 16Gb Wifi Led 7.9
+        h1.product__title Ipad Mini Apple 16Gb Wifi Led 7.9
 
         .product__image
           img(src='http://placehold.it/500x500')
@@ -20,7 +20,8 @@ html
         include _product-info
 
         hr
-          
-        include _tabs
+
+        .product__box
+          include _tabs
 
     script(src='js/app.js')

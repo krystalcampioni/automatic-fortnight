@@ -1,39 +1,54 @@
-.tabs {
-  @include span-columns(12 of 12);
-  list-style: none;
-  position: relative;
-  text-align: left;
+$max-tab-count: 2;
 
-  li {
-    float: left;
-    display: block;
+.tab {
+  display: none;
+
+  @for $i from 1 through $max-tab-count {
+    &:checked:nth-of-type(#{$i}) ~ .tab__content:nth-of-type(#{$i}) {
+      opacity: 1;
+      position: relative;
+      text-shadow: 0 0 0;
+      top: 0;
+      transform: translateY(0px);
+      transition: 0.5s opacity ease-in, 0.8s transform ease;
+      z-index: 100;
+    }
   }
 
-  input[type="radio"] {
-    position: absolute;
-    top: 0;
-    left: -9999px;
-  }
-
-  .tab__content{
-    z-index: 2;
-    display: none;
-    width: 100%;
-    position: absolute;
-    top: 25px;
-    left: 0;
-  }
-
-  [id^="tab"]:checked + label {
+  &:checked + label {
+    @include linear-gradient(#f0f0f0, #fff);
     border-bottom: 1px solid #fff;
     cursor: default;
-    font-weight: 700;
-    box-shadow: 2px 0 2px rgba(255,255,255,.5);
-    z-index: 10;
-    position: relative;
+    font-weight: bold;
+    box-shadow: 2px 0 2px rgba(255, 255, 255, 0.5);
   }
 
-  [id^="tab"]:checked ~ [id^="tab-content"] {
-    display: block;
+  + label {
+    display: inline-block;
+    z-index: 200;
+
+    &:hover {
+      background: #f0f0f0;
+    }
+  }
+
+  &__content {
+    border-radius: 0 0 5px 5px;
+    left: 0;
+    margin-top: -1px;
+    opacity: 0;
+    position: absolute;
+    transform: translateY(-3px);
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__container {
+    @include display(flex);
+    @include transition(all .3s ease);
+    flex-wrap: wrap;
+    list-style: none;
+    max-width: 100%;
+    position: relative;
   }
 }

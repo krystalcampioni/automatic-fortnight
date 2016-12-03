@@ -11,6 +11,10 @@
   &__box {
     @include span-columns(12 of 12);
     @include pad(20px);
+
+    @include media($mobile) {
+      @include pad(5px);
+    }
   }
 
   &__image,
@@ -18,6 +22,10 @@
     @include span-columns(6 of 12);
     @include omega();
     @include pad();
+
+    @include media($tablet) {
+      @include span-columns(12 of 12);
+    }
   }
 
   &__price {

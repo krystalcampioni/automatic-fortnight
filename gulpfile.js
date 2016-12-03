@@ -17,7 +17,7 @@ var paths = {
     scripts: ['js/tiny.min.js', 'js/chico.min.js', 'js/*'],
     styles: ['scss/main.scss','scss/**/*.scss', 'scss/*.scss'],
     images: ['assets/**/*'],
-    content: ['views/*.pug']
+    content: ['views/index.pug']
 }
 
 // Compiles scss files and outputs minified file to docs/css/*.css

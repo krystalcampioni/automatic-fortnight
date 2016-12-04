@@ -1,5 +1,5 @@
 # Automatic Fortnight
-This is a sample product page built with Gulp, Pug, Sass, Bourbon and Neat
+This is a sample product page built with Gulp, Pug, Sass, Chico, Bourbon and Neat
 
 ## Running the project
 1. `$ git clone git@github.com:krystalcampioni/automatic-fortnight.git`
@@ -21,3 +21,4 @@ The files will be compiled, concatenated, minified, compressed and output to the
  - Minified HTML via [gulp-minify-html](https://www.npmjs.com/package/gulp-minify-html)
  - Pug templates support via [gulp-pug](https://www.npmjs.com/package/gulp-pug)
  - Image compression via [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin)
+ - Carousel and styles via [Chico](https://github.com/mercadolibre/chico)

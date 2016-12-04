@@ -1,13 +1,9 @@
-[![dependencies Status](https://david-dm.org/jakemmarsh/angularjs-gulp-browserify-boilerplate/status.svg)](https://david-dm.org/krystalcampioni/gulp-pug-bourbon-neat-boilerplate) [![devDependency Status](https://david-dm.org/jakemmarsh/angularjs-gulp-browserify-boilerplate/dev-status.svg)](https://david-dm.org/krystalcampioni/gulp-pug-bourbon-neat-boilerplate)
-
-
-# Gulp-Pug-Bourbon-Neat-Boilerplate
-This is an opinionated starter boilerplate that uses Gulp, Pug ( formerly Jade ), Bourbon and Neat
-
+# Automatic Fortnight
+This is a sample product page built with Gulp, Pug, Sass, Bourbon and Neat
 
 ## Running the project
-1. `$ git clone git@github.com:krystalcampioni/gulp-pug-bourbon-neat-boilerplate.git`
-2. `$ cd gulp-pug-bourbon-neat-boilerplate`
+1. `$ git clone git@github.com:krystalcampioni/automatic-fortnight.git`
+2. `$ cd automatic-fortnight`
 3. `$ npm install`
 4. `$ gulp`
 
